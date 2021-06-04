@@ -20,7 +20,9 @@ body {
     border-radius: 10px;
     color: #fff;
     padding: 0.5rem 3rem;
-    font-size: 1.2rem;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /*----- Heaeder ----- */
@@ -76,7 +78,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 8rem;
+    padding-top: 6rem;
+    flex-wrap: wrap;
 }
 
 .container-flex img {
@@ -126,7 +129,7 @@ body {
 }
 
 .call-you {
-    width: 110%;
+    width: 100%;
 }
 
 .call-you h3 {
@@ -160,7 +163,8 @@ body {
     background: var(--gray);
     border-radius: 10px;
     display: flex;
-    min-height: 180px;
+    align-items: center;
+    min-height: 200px;
 }
 
 .card-image{
@@ -169,7 +173,6 @@ body {
     background: var(--red);
     margin-right: 1.5rem;
     border-radius: 100px;
-    margin-top: 0.5rem;
 }
 
 .card-content {
@@ -222,11 +225,79 @@ body {
 }
 
 .social-medias {
-    text-align: center;
+    /* text-align: center; */
     color: var(--red);
     font-size: 2rem;
 }
 
 .social-medias i {
     padding: 0 0.5rem;
+}
+
+@media(max-width: 768px){
+    .header {
+        flex-direction: column;
+        justify-content: space-between;
+        /* min-height: 300px; */
+        padding: 2rem;
+    }
+    .header .text-logo {
+        padding-bottom: 2rem;
+    }
+    .header .nav .button {
+        display: none;
+    }
+    .container-flex:nth-child(1) .informations {
+        text-align: center;
+    }
+
+    .container-flex:nth-child(2) {
+        padding: 1rem;
+        flex-wrap: wrap-reverse;
+    }
+    .container-flex:nth-child(3) {
+        padding: 1rem;
+    }
+
+    .informations {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .call-you {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .call-you form {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    .call-you form input {
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+
+    .container-flex img {
+        margin-top: 2rem;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .footer section {
+        margin: 1rem 0;
+        width: 40%;
+    }
+    .card {
+        width: 80%;
+        margin: 1rem 0;
+    }
 }
